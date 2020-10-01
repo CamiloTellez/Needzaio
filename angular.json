@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "test-needzaio"
+    }
+  },
+  "defaultProject": "test-needzaio",
+  "cli": {
+    "analytics": "45cc24db-4bad-4bb3-80a6-e4a47527592a"
+  }
 }
