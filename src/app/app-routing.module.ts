@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () =>
-      import('./features/users/users.module').then((m) => m.UsersModule),
+      import('./features/features.module').then((m) => m.FeaturesModule),
   },
   {
     path: '404',
