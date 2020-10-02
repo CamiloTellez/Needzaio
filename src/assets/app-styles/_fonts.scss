@@ -1,0 +1,73 @@
+///////OPEN SANS
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("assets/fonts/Bold/OpenSans-Bold.woff2") format("woff2"),
+    url("assets/fonts/Bold/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("assets/fonts/Regular/OpenSans-Regular.woff2") format("woff2"),
+    url("assets/fonts/Regular/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+///SEGOE UI
+
+@font-face {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: normal;
+  src: url("assets/fonts/Regular/Segoe-UI.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: bold;
+  src: url("assets/fonts/Bold/Segoe-UI-Bold.woff") format("woff");
+}
+
+///Museo sans rounded 700
+
+@font-face {
+  font-family: "Museo Sans Rounded 700";
+  font-style: normal;
+  font-weight: bold;
+  src: url("assets/fonts/Bold/MuseoSansRounded700.woff") format("woff");
+}
+
+/////Comfortaa
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("assets/fonts/Bold/Comfortaa-Bold.woff2") format("woff2"),
+    url("assets/fonts/Bold/Comfortaa-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("assets/fonts/Regular/Comfortaa-Regular.woff2") format("woff2"),
+    url("assets/fonts/Regular/Comfortaa-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/////Gibson
+
+@font-face {
+  font-family: "Gibson";
+  font-style: normal;
+  font-weight: normal;
+  src: url("assets/fonts/SemiBold/GibsonSemiBd.woff") format("woff");
+}
