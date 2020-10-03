@@ -1,6 +1,56 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6">Logo</div>
-    <div class="col-md-6">Formulario</div>
+<div class="h-100">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-md-6 color-fondo-logo">
+      <div class="container-logo text-center">
+        <img
+          src="./../../../../assets/images/logos/logo-home.svg"
+          class="logo-img"
+          width="304"
+          height="304"
+        />
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <!-- INICIO FORMULARIO DE LOGIN -->
+      <section class="section-form">
+        <h1 class="my-4 titulo-app">BIENVENIDO</h1>
+        <form [formGroup]="frmLogin" (ngSubmit)="onSubmit()">
+          <div class="float-field">
+            <input
+              type="email"
+              class="form-control"
+              formControlName="email"
+              placeholder="EMAIL"
+              id="email"
+            />
+            <label for="email">EMAIL</label>
+          </div>
+          <div class="float-field">
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password"
+              placeholder="CONTRASEÑA"
+              id="contrasena"
+            />
+            <label for="contrasena">CONTRASEÑA</label>
+          </div>
+          <p class="text-right my-4">¿Olvidaste tu contraseña?</p>
+          <div class="text-center mt-4">
+            <button
+              type="submit"
+              class="mt-4 btn-main"
+              [disabled]="!frmLogin.valid"
+            >
+              INICIAR SESIÓN
+            </button>
+            <p class="text-center mt-4">
+              AÚN NO TENGO UNA CUENTA<a href=""> REGISTRARSE</a>
+            </p>
+          </div>
+        </form>
+      </section>
+    </div>
   </div>
 </div>
