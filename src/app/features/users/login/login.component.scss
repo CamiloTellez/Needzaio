@@ -1,0 +1,31 @@
+.titulo-app {
+  text-align: left;
+  font: normal normal 600 2rem Gibson;
+  letter-spacing: 0px;
+  color: #4d4f5c;
+  text-transform: uppercase;
+}
+
+.titulo-app::before {
+  border-left: 10px solid #ff6752;
+  content: "";
+  padding: 10px 20px;
+}
+
+.logo-img {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 50%;
+}
+
+.container-logo {
+  height: 100vh;
+  margin-top: 50%;
+}
+.section-form {
+  padding: 0px 100px;
+}
+
+.color-fondo-logo {
+  background-color: #ff6752;
+}
