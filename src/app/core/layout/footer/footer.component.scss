@@ -1,0 +1,32 @@
+footer {
+  position: absolute;
+  bottom: 0px;
+  background-color: #ff6752;
+
+  a,
+  p {
+    color: #fff !important;
+    font-size: 1.3rem;
+  }
+
+  h5 {
+    font-weight: bold;
+    color: #ffe530;
+  }
+  li {
+    margin-top: 10px;
+  }
+
+  input[type="email"] {
+    border-radius: 40px;
+    border-width: 0px;
+    min-height: 80px;
+    min-width: 200px;
+    padding: 20px;
+  }
+
+  input[type="email"] :focus {
+    border-width: 0px;
+    border-color: transparent;
+  }
+}

@@ -1,0 +1,41 @@
+.card-title-pet {
+}
+
+.main-card {
+  border-radius: 20px;
+  background: #4487ff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+
+  h5 {
+    color: #ffe530;
+    font-family: "Comfortaa";
+    font-weight: bold;
+  }
+}
+
+.img-pet {
+  //background-color: #ffe530;
+
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  background: #ffe530;
+  margin-top: 20px;
+}
+
+.img-pet::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  width: 350px;
+  height: 100%;
+  //border-radius: 100%;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  /*  background: center center / cover;
+  background-image: url("../../../../assets/images/pets/funny-dog.png"); */
+  background: url("../../../../assets/images/pets/funny-dog-middle.png") center
+    no-repeat;
+}

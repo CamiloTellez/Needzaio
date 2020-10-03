@@ -22,6 +22,17 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     HomeComponent,
     NotFoundComponent,
   ],
+  exports: [
+    NavMenuComponent,
+    FooterComponent,
+    BrandServicesComponent,
+    BrandTestimonialsCarouselComponent,
+    BrandHowItWorksComponent,
+    BrandJoinComponent,
+    //PAGES
+    HomeComponent,
+    NotFoundComponent,
+  ],
   imports: [CommonModule],
 })
 export class CoreModule {}
