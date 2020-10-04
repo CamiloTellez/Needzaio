@@ -1,5 +1,5 @@
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0px;
   background-color: #ff6752;
 
@@ -15,18 +15,5 @@ footer {
   }
   li {
     margin-top: 10px;
-  }
-
-  input[type="email"] {
-    border-radius: 40px;
-    border-width: 0px;
-    min-height: 80px;
-    min-width: 200px;
-    padding: 20px;
-  }
-
-  input[type="email"] :focus {
-    border-width: 0px;
-    border-color: transparent;
   }
 }

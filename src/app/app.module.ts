@@ -4,11 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CoreModule } from './core/core.module';
+
+import { PagesModule } from './core/pages/pages.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, PagesModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

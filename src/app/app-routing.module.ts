@@ -7,12 +7,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home',
-  },
-
-  {
-    path: 'home',
-    component: HomeComponent,
+    redirectTo: '/login',
   },
   {
     path: 'login',
@@ -20,9 +15,11 @@ const routes: Routes = [
       import('./features/features.module').then((m) => m.FeaturesModule),
   },
   {
-    path: '404',
-    component: NotFoundComponent,
+    path: '',
+    loadChildren: () =>
+      import('./core/pages/pages.module').then((m) => m.PagesModule),
   },
+
   {
     path: '**',
     redirectTo: '404',

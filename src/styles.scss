@@ -4,6 +4,11 @@
 @import "~bootstrap/scss/bootstrap";
 
 //----------------------------------*\
+// Colors
+//----------------------------------*/
+@import "assets/app-styles/_colors.scss";
+
+//----------------------------------*\
 // Fonts
 //----------------------------------*/
 @import "assets/app-styles/_fonts.scss";
@@ -29,7 +34,7 @@ $font-lg: 20px;
 
 * {
   font-family: $third_font;
-  /*   font-size: $primary-fs; */
+  font-size: $primary-fs;
   font-weight: $regular;
 }
 html,
@@ -37,10 +42,42 @@ body {
   height: 100%;
 }
 
+///
+//Margin para las secciones principales y se separe del navbar
+////
+main {
+  margin-top: 10rem !important;
+}
+
+.orange-title {
+  font-weight: bold;
+  font-size: 2rem;
+  color: $orange;
+}
+.orange-sub-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: $orange;
+}
+
 //----------------------------------*\
-// Colors
+// Font colors
 //----------------------------------*/
-@import "assets/app-styles/_colors.scss";
+.font-white {
+  color: $white;
+}
+
+.font-yellow {
+  color: $yellow;
+}
+
+.font-orange {
+  color: $orange;
+}
+
+.font-gray {
+  color: $gray-soft;
+}
 
 //----------------------------------*\
 // Buttons
@@ -54,16 +91,15 @@ body {
 p {
   text-align: left;
   font-family: "Open Sans";
-  font-size: 1rem;
-  color: #a4afb7;
+  font-size: 1.2rem;
+  color: $gray-soft;
 }
 
 //----------------------------------*\
-// inputs
+// inputs Forms
 //----------------------------------*/
 
-input[type="email"],
-input[type="password"] {
+.input-form {
   background: $white 0% 0% no-repeat padding-box;
   box-shadow: 2px 3px 4px #00000029;
   border-width: 0px;
@@ -73,12 +109,12 @@ input[type="password"] {
 /*
 Por defecto el placeholder no está visible, hasta que se hace focus
 */
-input::placeholder {
+.input-form::placeholder {
   opacity: 0 !important;
   transition: inherit;
 }
 
-input:focus ::placeholder {
+.input-form:focus ::placeholder {
   font-size: 1.2rem;
   font-weight: 500;
   padding: 10px 10px;
@@ -98,18 +134,18 @@ input:focus ::placeholder {
 * transicion para el label e input.
 */
 label,
-input {
+.input-form {
   transition: all 0.2s;
   touch-action: manipulation;
 }
 
-input:focus {
+.input-form:focus {
   outline: 0;
   border-bottom: 1px solid #666;
 }
 
 label,
-input {
+.input-form {
   text-align: left;
   font: normal normal normal 0.9rem "Open Sans";
   letter-spacing: 0px;
@@ -122,7 +158,7 @@ input {
 /**
 * Mueve diagonalmente el label para dar el efecto de placeholder,
 */
-input:placeholder-shown + label {
+.input-form:placeholder-shown + label {
   cursor: text;
   max-width: 66.66%;
   white-space: nowrap;
@@ -136,8 +172,83 @@ input:placeholder-shown + label {
 * cuando se hace focus, se remueve el transfor y el escalamiento
  When the element is focused, remove the label transform.
 */
-input:not(:placeholder-shown) + label,
-input:focus + label {
+.input-form:not(:placeholder-shown) + label,
+.input-form:focus + label {
   transform: translate(0, 0) scale(1);
   cursor: pointer;
+}
+
+//----------------------------------*\
+//Input Arrow
+//----------------------------------*\
+
+.input-pill {
+  border-radius: 40px;
+  border-width: 0px;
+  min-height: 80px;
+  min-width: 200px;
+  padding: 20px;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.input-pill :focus {
+  border-width: 0px;
+  border-color: transparent;
+}
+
+/* .input-arrow::after {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAErUlEQVRoge2a728URRjHP8/e9e5atAlg0SgvTKhaDLxSXrXYxJpqRRFaeKcEE22LUo3B+EcgCQkVPQ+jRHhXroUSbfihsRZNCL6Shh+2NRghSkuNocq1194+vri7utd273b3tuVe8Hk1O/vMzPd7M7czO7Nwj9JC/KpId21aTipSj1AL+iToGjBWgS7LNPUv6E3gV5BLYJ5jSvvl8PG//Wi/KCPa0RRmOrINZQdIAxBwWUUKOINyhHAiLp19U161eDKi720v5465C9U9CA97bXwON1D2kayMyuHDk24Luzaib25pwjA6gTVuyzprgGEM2S3R+Ck3xRwbSQ+jir2ovuNenQeUIywLtMn+roSTcEdG9I3NDxIo+wr0qeLUuUS4APqSRHtGC4cWQNu3PIppnEGo9keda4YQs1Gix6/lC8prRF/fXkVoZgDkCX+1uWaEQKBOPu760y7AsLuhO3dGCJl9JWACYA1mqlc7msJ2AbZGCE/sX/L/RD6UDUyV77O7veDQyjxiv148VUWgxvMSO3Z6bvY8I9rRFCZZ/jPw+JIIc4syTLJy/dxJc/7QSla8TamaABCqCU+0zc+2kOmNEeCRJRPmjeuEEtXWtVluj0xHtrHYJoQ6kA1AwUkuD6tJVjRbM3KNKDuKqNwZYk7Kp/GfEG2gGDPCa7mXGXTXpuWY4THcL8XdMopog0R7BrV96zpUvgFWeahnhlBipXT23QZrj6Qi9Sy+CYBVIN9q6yvrJdoziEo98IeHeoJMR57JXvxvxNA6H0Q6Q6lCAme1fes6icWvINqIl2GmLGBEWeuLSOf40DNSk01Z/+yP+aPPBUX3jM7Od1YjK/1T6ArvPSOyIpsMWrLvc1TYNGrl0LEf3Sh1g8TiV7StZTPohYLBSmU2ab/6tW0p5b7MEmDtkX+AFXaBs4gMaFtzwTBXCGOYqQaJnbiorS01oCcdlrudTVp/3Vv+qnPMKOizEjtxUdu3rkO0H3jIUUllPJu0Ghn2WWBhhDE09ZxEewa1taUGlTO4m+WHsgmLEbnkn0JHeO+JLMrlbNI6If7gm8RCFN8TaQwdmE3OZiZT35Hei11siu+JNNOUTX6fvZg1ktkVP+uD0PwY5os+rHwBTmdXvjD/feTLIiQ6IyXl2tbydJEmQPSo9TLXSDgRB254rtyRABnIzNreTcB1xoPd1owcI9LZN4Viu3dUQuyVrq6kNWP+ciOc+AT06pJJcs8QoURsbuY8I9LZN4UY7y6NJtcopry10MnWggvA9CGLHFx8XW7RA3IovuCT1X4lG7qzJ30+UTKc56/gB3Y38x8rtL78ABI8VwI78iOkZmrls96bdgF53y0kdvIWoi9gWZzdBX4hSEM+E+DgxUqix68hWneXhtl5koE6Odj9W6FAR297Eu0ZpSyxEZEDgBYtzxkxQol6+aJrzEmw++Pp1m2NiPkRi7brolcxjd12Tyc7vH0w0NEUJlnRDvo+sNpLHQvwO/AhoUTMyxcQxX/CkaxoBn0VaCR3D8AJM8ApRI8yHuyeu+xwg38f1XQ0VZKsqAdzIxhrQauBKuD+TMgEyijCMMplDB0gmeqXz3sn/NJwj1LiP4WbpWxozujMAAAAAElFTkSuQmCC")
+    no-repeat center center;
+} */
+
+/******
+Tarjetas con iconos
+
+******/
+.icon-card {
+  max-width: 50px;
+}
+
+.card-custom {
+  width: 170px;
+  height: 170px;
+  padding: 25px 0px;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 20px;
+}
+
+.card-under-title {
+  font-weight: 600;
+  color: $gray-soft;
+}
+
+////
+//Imagenes mascotas
+///////////
+
+.img-pet {
+  //background-color: #ffe530;
+
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  background: #ffe530;
+  margin-top: 20px;
+}
+
+.img-pet::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  width: 350px;
+  height: 100%;
+  //border-radius: 100%;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  /* background image se debe setear con la url de la imagen que se va a colocar dentro del circulo */
+  /*background: url("../../../../assets/images/pets/funny-dog-middle.png") center
+    no-repeat;
+  */
 }

@@ -9,3 +9,14 @@
   color: $white-soft;
   font-size: 1.3rem;
 }
+
+.btn-white {
+  background: $white-soft 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #2c1dad29;
+  border-radius: 38px;
+  border-color: transparent;
+  padding: 15px 25px;
+  font-weight: bold;
+  color: $orange;
+  font-size: 1.3rem;
+}
