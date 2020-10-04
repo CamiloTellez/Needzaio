@@ -26,6 +26,7 @@
             />
             <label for="email">EMAIL</label>
           </div>
+
           <div class="float-field">
             <input
               type="password"
@@ -36,6 +37,7 @@
             />
             <label for="contrasena">CONTRASEÑA</label>
           </div>
+
           <p class="text-right my-4">¿Olvidaste tu contraseña?</p>
           <div class="text-center mt-4">
             <button
@@ -45,6 +47,43 @@
             >
               INICIAR SESIÓN
             </button>
+
+            <!-- Errores email -->
+            <div
+              *ngIf="email.invalid && (email.dirty || email.touched)"
+              class="mt-5"
+            >
+              <div class="alert alert-danger" role="alert">
+                Debes colocar un email válido
+              </div>
+
+              <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="email.errors.required"
+              >
+                El email es obligatorio
+              </div>
+            </div>
+
+            <!-- Errores password -->
+            <div
+              *ngIf="password.invalid && (password.dirty || password.touched)"
+              class="mt-5"
+            >
+              <div class="alert alert-danger" role="alert">
+                Debes colocar un password válido
+              </div>
+
+              <div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="password.errors.required"
+              >
+                La contraseña es obligatoria
+              </div>
+            </div>
+
             <p class="text-center mt-4">
               AÚN NO TENGO UNA CUENTA<a href=""> REGISTRARSE</a>
             </p>
