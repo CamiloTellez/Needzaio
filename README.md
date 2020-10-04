@@ -2,26 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
-## Development server
+# Login:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+El login automaticamente sobre escribe el correo ingresado para obtener un token válido.
 
-## Code scaffolding
+Una vez se realiza el login , redirige automaticamente al módulo que administra las paginas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Estructura:
 
-## Build
+## Módulo Core
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+La carpeta LAYOUT con los componentes que se utilizan en las páginas web
 
-## Running unit tests
+La carpeta PAGES (Lazy load) con los componentes que se utilizan desde el router para la navegación de la página
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+La carpeta SERVICES con los servicios que se utilizan en la APP en general
 
-## Running end-to-end tests
+## Módulo Features (Caracteristicas de la app)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+La carpeta USERS con los componentes que se utilizan con lógica de la app y contiene los formularios
 
-## Further help
+# Pendientes
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- La maquetación de las ondas y figuras del fondo de la página
